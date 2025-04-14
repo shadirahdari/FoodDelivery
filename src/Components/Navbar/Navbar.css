@@ -64,14 +64,14 @@
   border-radius: 50%;
 }
 
-/* 🔥 Hamburger hidden by default */
+
 .hamburger {
   display: none;
   font-size: 26px;
   cursor: pointer;
 }
 
-/* Responsive styles */
+
 @media (max-width: 750px) {
   .hamburger {
     display: block;
