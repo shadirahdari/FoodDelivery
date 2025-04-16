@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import'./Cart.css'
+import './Cart.css'
 import { StoreContext } from '../../../Context/StoreContext'
 
 const Cart = () => {
-  const{cartItems,food_list,removeFromCart}=useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
   return (
     <div className='cart'>
       <div className="cart-items">
@@ -11,14 +11,27 @@ const Cart = () => {
           <p>Items</p>
           <p>Title</p>
           <p>Price</p>
-          <p>Quntity</p>
+          <p>Quantity</p>
           <p>Total</p>
           <p>Remove</p>
         </div>
         <br />
         <hr />
+        {food_list.map((item, index) => {
+          if (cartItems[item._id] > 0) {
+            return (
+              <div className='cart-items-title cart-items-item'>
+                <img src={item.image} alt="" />
+                <p>{item.name}</p>
+                <p>{item.price}</p>
+                <p>{cartItems[item._id]}</p>
+                <p>{item.price *cartItems[item._id]}</p>
+                <p>X</p>
+              </div>
+            )
+          }
+        })}
       </div>
-      
     </div>
   )
 }
