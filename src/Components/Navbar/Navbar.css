@@ -50,11 +50,11 @@
   border-bottom: 2px solid #49557e;
 }
 
-.navbar-search-icone {
+.navbar-search-icon {
   position: relative;
 }
 
-.navbar-search-icone .dot {
+.navbar-search-icon .dot {
   position: absolute;
   top: -8px;
   right: -8px;
@@ -65,11 +65,6 @@
 }
 
 
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
 
 
 @media (max-width: 750px) {
